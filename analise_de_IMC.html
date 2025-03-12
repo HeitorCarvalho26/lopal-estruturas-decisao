@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Obter altura em metros e peso em quilogramas do usuário
+        //Calcular o IMC = peso/(altura * altura)
+        //Verificar se o IMC está no intervalo entre 18.5 e 35
+        //Se estiver nesse intervalo exibir o IMC e dar os parabéns para o usuário
+        //Se estiver abaixo de 18.5 "Seu IMC indica que você está abaixo do peso!"
+        //Se estiver acima de 35 exibir "Seu IMC indica que você está a cima do peso!"
+        //Depois de escrito o programa, atualize o repositório remoto e envie o link pela tarefa.
+        let peso = prompt("Coloque seu peso aqui!");
+        let altura = prompt("Coloque sua altura aqui!");
+        let IMC = (peso / (altura * altura));
+        if (IMC <= 18.5) {
+            document.write("Seu IMC é de  " + IMC + " você está abaixo do peso.");
+        } else if (IMC > 35) {
+            document.write("Seu IMC é de  " + IMC + " você está acima do peso.");
+        } else if (IMC > 18.5 && IMC <= 35 ){
+            document.write("Seu IMC é de  " + IMC + " você esta saudavel.");
+        }
+    </script>
+</body>
+
+</html>
