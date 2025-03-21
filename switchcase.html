@@ -13,6 +13,8 @@
     <script>
         let dataDeHoje = new Date().getDay();
 
+        document.write("<h1>Com Else-If</h1>")
+
         if (dataDeHoje == 0) {
             document.write("Hoje é Domingo");
         } else if (dataDeHoje == 1) {
@@ -24,12 +26,15 @@
         } else if (dataDeHoje == 4) {
             document.write("Hoje é quinta-feira.");
         } else if (dataDeHoje == 5) {
-            document.write("Hoje é sexta-feira. ");
+            document.write("Hoje é sexta-feira. <br> ");
         } else if (dataDeHoje == 6) {
             document.write("Hoje é sábado. ");
         } else {
             document.write("Hoje não é um dia da semana. ")
         }
+
+
+        document.write("<h1>Com Swirch-Case</h1>")
 
 
         switch (dataDeHoje) {
@@ -49,12 +54,16 @@
                 document.write("Hoje é quinta-feira. ");
                 break;
             case 5:
-                document.write("Hoje é sexta-feira. ");
+                document.write("Hoje é sexta-feira. <br> ");
                 break;
             case 6:
                 document.write("Hoje é sábado. ");
         }
-        document.write(dataDeHoje);
+        document.write(dataDeHoje + "<br>");
+
+
+        document.write("<h1>Com Operadores Terminais</h1>")
+
 
         let diaDaSemana = (dataDeHoje) == 0 ? "domingo" :
             (dataDeHoje) == 1 ? "segunda-feira" :
@@ -64,7 +73,37 @@
                             (dataDeHoje) == 5 ? "sexta-feira" :
                                 (dataDeHoje) == 6 ? "sabado" :
                                     "Dia da semana inválido.";
-        document.write(" Hoje é " + diaDaSemana + ".");
+        document.write(" Hoje é " + diaDaSemana + "<br>");
+
+
+        // Programação declarativa
+
+        document.write("<h1>Com um array</h1>")
+
+        const diasDaSemana = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sabado"];
+
+        document.write("<p>Hoje é " + diasDaSemana[dataDeHoje] + ".</p>");
+
+        // Usando um mapa
+        // Programação declaratica
+
+        document.write('<h1>Com Mapa (map)</h1>');  
+        const mapaDeDias = new Map([
+        [0, "Domingo"],
+            [1, "Segunda-Feira"],
+            [2, "Terça-Feira"],
+            [3, "Quarta-Feira"],
+            [4, "Quinta-Feira"],
+            [5, "Sexta-Feira"],
+            [6, "Sabado"]
+
+        ]);
+
+        // Vantagens;
+        // - posso declarar os valores fora de ordem 
+        // - não fica associado a um indice que indica 0
+
+        document.write("<p>Hoje é " + mapaDeDias.get(dataDeHoje) + ".</p>")
     </script>
 
 </body>
